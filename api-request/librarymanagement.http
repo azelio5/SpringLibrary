@@ -1,0 +1,75 @@
+POST http://localhost:8080/auth/registernormaluser
+Content-Type: application/json
+
+{
+  "username": "Anvar Alekperov",
+  "email": "a.alakbarov@gmail.com",
+  "password": "123456"
+}
+
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "Anvar Alekperov",
+  "password": "123456"
+}
+
+### Login User
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "Anvar Alekperov",
+  "password": "123456"
+}
+
+### Login first admin
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "username": "azelio",
+  "password": "3421446"
+}
+
+### Register second admin
+
+POST http://localhost:8080/admin/registeradminuser
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhemVsaW8iLCJpYXQiOjE3NTMyOTQzNjcsImV4cCI6MTc1MzI5Nzk2N30.GcoxCCobQL3naknTEY_TuWddGzx1Nmaf26nda5f-VEw
+
+{
+  "username": "azelio2",
+  "email": "nebrosaem@ro.ru",
+  "password": "8008818"
+}
+
+### Add book by admin
+
+POST http://localhost:8080/api/books/addbook
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhemVsaW8iLCJpYXQiOjE3NTMyOTQzNjcsImV4cCI6MTc1MzI5Nzk2N30.GcoxCCobQL3naknTEY_TuWddGzx1Nmaf26nda5f-VEw
+
+{
+  "title": "Harry Potter",
+  "author": "Rouling",
+  "isbn": "666",
+  "quantity": 1,
+  "isAvailable": true
+}
+
+### issue book by user
+POST http://localhost:8080/api/issuerecords/issuethebook/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbnZhciBBbGVrcGVyb3YiLCJpYXQiOjE3NTMyOTU5MDUsImV4cCI6MTc1MzI5OTUwNX0.OuUpYUI-0EZUU5GjijC89Ez8Wp6Ja3pUUkVo-rBJ1qs
+
+### Return the book
+
+### issue book by user
+POST http://localhost:8080/api/issuerecords/returnthebook/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbnZhciBBbGVrcGVyb3YiLCJpYXQiOjE3NTMyOTU5MDUsImV4cCI6MTc1MzI5OTUwNX0.OuUpYUI-0EZUU5GjijC89Ez8Wp6Ja3pUUkVo-rBJ1qs
+
